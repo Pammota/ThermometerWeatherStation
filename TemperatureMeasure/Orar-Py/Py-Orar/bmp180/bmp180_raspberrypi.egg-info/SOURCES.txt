@@ -1,0 +1,11 @@
+README.rst
+setup.py
+bin/bmp180-example
+bmp180/__init__.py
+bmp180/bmp180.py
+bmp180_raspberrypi.egg-info/PKG-INFO
+bmp180_raspberrypi.egg-info/SOURCES.txt
+bmp180_raspberrypi.egg-info/dependency_links.txt
+bmp180_raspberrypi.egg-info/not-zip-safe
+bmp180_raspberrypi.egg-info/requires.txt
+bmp180_raspberrypi.egg-info/top_level.txt

@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: bmp180-raspberrypi
+Version: 1.0
+Summary: A package to handle the i2c communication between a Raspberry Pi and a BMP180
+Home-page: https://github.com/Tijndagamer/BMP180-Python
+Author: MrTijn/Tijndagamer
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: bmp180 raspberrypi raspberry pi
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Programming Language :: Python :: 2.7
