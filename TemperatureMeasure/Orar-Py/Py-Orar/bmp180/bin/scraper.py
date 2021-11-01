@@ -34,9 +34,9 @@ def getTemp():
     raw = lis[0].text
     noacc=unidecode.unidecode(raw)
 
-    number = noacc.find('\n') 
+    number = noacc.rpartition('d')[0]
 
-    return int( noacc.join(c for c in noacc if c.isdigit()))
+    return number
 
 
 def writerr(word):
