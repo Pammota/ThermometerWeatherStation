@@ -4,6 +4,7 @@ import time
 import inkyphat
 import keyboard	
 from PIL import Image, ImageFont, ImageDraw
+from scraper import getTemp, getVreme
 
 
 inkyphat.set_colour("red")
@@ -63,11 +64,11 @@ def thermometer(date):
     year = date.strftime('%Y')
     hour = date.strftime('%H')
 
-    temp = f"{readerr('temp.txt')} 'C "
-    press = f"{round(reader2('press.txt')/100,2)} Pa"
-    alt = f"{round(reader2('alt.txt')*1000,2)} m"
+    temp = f"{getTemp()} 'C "
+    # press = f"{round(reader2('press.txt')/100,2)} Pa"
+    # alt = f"{round(reader2('alt.txt')*1000,2)} m"
 
-    message = f"Temperature: {temp} \nPressure: {press} \n Altitude:{alt}"
+    message = f"Temperature: {temp} \n"
     message2 = weekday
 
     w, h = font.getsize(message2)
@@ -78,7 +79,7 @@ def thermometer(date):
 
 
     try:
-        img = Image.open(weather_imager[weather()])
+        img = Image.open(weather_imager[getVreme()])
         inkyphat.set_image(img)
     except KeyError as error:
         img = Image.open("pimoroni.png")
