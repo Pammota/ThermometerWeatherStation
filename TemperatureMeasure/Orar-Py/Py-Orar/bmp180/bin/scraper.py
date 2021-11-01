@@ -6,7 +6,7 @@ import time
 
 url = "https://www.vremea.ro/cluj/clujnapoca/"
 
-def getvreme():
+def getVreme():
     res = requests.get(url)
     html_page = res.content
 
@@ -21,16 +21,35 @@ def getvreme():
 
     return noacc[:number]
 
+def getTemp():
+    res = requests.get(url)
+    html_page = res.content
+
+    soup = BeautifulSoup(html_page, 'html.parser')
+
+    result = soup.find("p", {"class":"txtnow"})
+
+    lis = result.find_all('b')
+
+    raw = lis[0].text
+    noacc=unidecode.unidecode(raw)
+
+    number = noacc.find('\n') 
+
+    return int( noacc.join(c for c in noacc if c.isdigit()))
+
+
 def writerr(word):
     f = open("vreme.txt","w")
     f.write(word)
     f.close()
 
 while 1:
-    vreme = getvreme()
-    writerr(vreme)
-    print(f"Running... {vreme} ...")
-    time.sleep(350)
+    # vreme = getVreme()
+    # writerr(vreme)
+    # print(f"Running... {vreme} ...")
+    print(getTemp())
+    time.sleep(5)
 
 
 

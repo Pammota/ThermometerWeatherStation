@@ -2,11 +2,8 @@ import sys
 import datetime
 import time
 import inkyphat
-from bmp180 import bmp180
 import keyboard	
 from PIL import Image, ImageFont, ImageDraw
-
-bpm = bmp180 import bmp180
 
 inkyphat.set_colour("red")
 inkyphat.set_border(inkyphat.WHITE)
@@ -65,7 +62,7 @@ while True:
   x  = datetime.datetime.now()
   if ct%5==0:
     screenclr(1,"red")
-  uniHour(x)
+  thermometer(x)
   if ct == 1:
     print(f"Process still running, {ct} time and counting.")
   else:
