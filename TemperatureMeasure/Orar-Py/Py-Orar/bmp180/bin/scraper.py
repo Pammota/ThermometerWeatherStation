@@ -44,12 +44,12 @@ def writerr(word):
     f.write(word)
     f.close()
 
-while 1:
-    # vreme = getVreme()
-    # writerr(vreme)
-    # print(f"Running... {vreme} ...")
-    print(getTemp())
-    time.sleep(5)
+# while 1:
+#     # vreme = getVreme()
+#     # writerr(vreme)
+#     # print(f"Running... {vreme} ...")
+#     print(getTemp())
+#     time.sleep(5)
 
 
 
